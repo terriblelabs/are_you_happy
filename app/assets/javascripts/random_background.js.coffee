@@ -11,5 +11,6 @@ getRandomImage = ->
 
     $('body').css('background-image', "url(#{url})")
 
-setInterval getRandomImage, 60000
-getRandomImage()
+$ ->
+  setInterval getRandomImage, 60000
+  getRandomImage()

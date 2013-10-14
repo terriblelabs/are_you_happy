@@ -1,13 +1,23 @@
 %main
-  %h1 Are you happy?
+  #input
+    %h1 Are you happy?
 
-  .buttons
-    #yes
-      = form_for(@mood) do |f|
-        = f.hidden_field :happy, value: true
-        = f.submit "Yes"
+    .buttons
+      #yes
+        = form_for(@mood, remote: true) do |f|
+          = f.hidden_field :happy, value: true
+          = f.submit "Yes"
 
-    #no
-      = form_for(@mood) do |f|
-        = f.hidden_field :happy, value: false
-        = f.submit "No"
+      #no
+        = form_for(@mood, remote: true) do |f|
+          = f.hidden_field :happy, value: false
+          = f.submit "No"
+
+  #thanks
+    %h1 Thanks!
+    %p
+
+:javascript
+  new FormHandler({
+    quoteSource: #{ENV['QUOTE_SOURCE'].to_json}
+  })

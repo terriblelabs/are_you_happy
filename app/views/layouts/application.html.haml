@@ -8,6 +8,7 @@
     = csrf_meta_tag
 
     = stylesheet_link_tag :application
+    = javascript_include_tag :application
 
     = render 'shared/fonts'
 
@@ -17,4 +18,3 @@
 
     :javascript
       flickrApiKey = "#{ENV['FLICKR_API_KEY']}";
-    = javascript_include_tag :application
