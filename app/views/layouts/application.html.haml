@@ -8,11 +8,13 @@
     = csrf_meta_tag
 
     = stylesheet_link_tag :application
-    = javascript_include_tag :application
-    = javascript_include_tag "vendor/custom.modernizr"
 
     = render 'shared/fonts'
 
   %body
     = render 'shared/flashes'
     = yield
+
+    :javascript
+      flickrApiKey = "#{ENV['FLICKR_API_KEY']}";
+    = javascript_include_tag :application
