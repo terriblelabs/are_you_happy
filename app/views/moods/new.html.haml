@@ -1,0 +1,9 @@
+%h1 Are you happy?
+
+= form_for(@mood) do |f|
+  = f.hidden_field :happy, value: true
+  = f.submit "Yes"
+
+= form_for(@mood) do |f|
+  = f.hidden_field :happy, value: false
+  = f.submit "No"
