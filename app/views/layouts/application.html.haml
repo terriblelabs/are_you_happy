@@ -11,8 +11,8 @@
     = javascript_include_tag :application
     = javascript_include_tag "vendor/custom.modernizr"
 
+    = render 'shared/fonts'
+
   %body
     = render 'shared/flashes'
-
-    .container-fluid
-      = yield
+    = yield

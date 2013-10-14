@@ -1,9 +1,13 @@
-%h1 Are you happy?
+%main
+  %h1 Are you happy?
 
-= form_for(@mood) do |f|
-  = f.hidden_field :happy, value: true
-  = f.submit "Yes"
+  .buttons
+    #yes
+      = form_for(@mood) do |f|
+        = f.hidden_field :happy, value: true
+        = f.submit "Yes"
 
-= form_for(@mood) do |f|
-  = f.hidden_field :happy, value: false
-  = f.submit "No"
+    #no
+      = form_for(@mood) do |f|
+        = f.hidden_field :happy, value: false
+        = f.submit "No"
