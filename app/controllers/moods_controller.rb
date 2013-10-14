@@ -5,8 +5,7 @@ class MoodsController < ApplicationController
 
   def create
     Mood.create!(mood_params)
-
-    redirect_to "/", notice: "Thanks."
+    head :ok
   end
 
   private
