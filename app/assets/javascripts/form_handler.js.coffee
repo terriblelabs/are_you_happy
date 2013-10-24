@@ -28,6 +28,7 @@ class FormHandler
     $('#thanks p').html(@nextQuote())
     $('#input').hide()
     $('#thanks').show()
+    setTimeout @showInput, 15000
 
 
 @FormHandler = FormHandler
