@@ -4,7 +4,7 @@ class RandomQuote
   get: (callback) =>
     url = "/quote.json"
     $.getJSON url, (data) ->
-      callback(data.quote)
+      callback(data)
 
 class FormHandler
   constructor: (@options) ->
@@ -25,7 +25,7 @@ class FormHandler
     $('#thanks').hide()
 
   saved: =>
-    $('#thanks p').html(@nextQuote())
+    $('#thanks #quote').html(@nextQuote())
     $('#input').hide()
     $('#thanks').show()
     setTimeout @showInput, 15000
