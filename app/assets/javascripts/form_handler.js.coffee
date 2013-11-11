@@ -21,6 +21,7 @@ class FormHandler
     @quote
 
   showInput: (e) =>
+    clearTimeout(@inputTimeout)
     $('#input').show()
     $('#thanks').hide()
 
@@ -28,7 +29,7 @@ class FormHandler
     $('#thanks #quote').html(@nextQuote())
     $('#input').hide()
     $('#thanks').show()
-    setTimeout @showInput, 15000
+    @inputTimeout = setTimeout @showInput, 15000
 
 
 @FormHandler = FormHandler
