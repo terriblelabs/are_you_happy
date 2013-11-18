@@ -3,4 +3,5 @@ AreYouHappy::Application.routes.draw do
   resource :quote
 
   root "moods#new"
+  resources :dashboard, only: [:index]
 end
