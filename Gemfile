@@ -45,4 +45,5 @@ end
 group :test do
   gem "capybara"
   gem "connection_pool"
+	gem "factory_girl_rails"
 end
