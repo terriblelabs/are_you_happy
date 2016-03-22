@@ -22,7 +22,6 @@ gem "haml"
 gem "newrelic_rpm"
 gem "pg"
 gem "zurb-foundation"
-gem "thin"
 
 group :production do
   gem "rails_12factor"
