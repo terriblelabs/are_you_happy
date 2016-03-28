@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20131014175043) do
 
-  create_table "moods", force: true do |t|
+  create_table "moods", force: :cascade do |t|
     t.boolean  "happy"
     t.datetime "created_at"
     t.datetime "updated_at"

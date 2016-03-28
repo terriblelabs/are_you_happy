@@ -21,6 +21,7 @@ gem 'jquery-rails'
 gem "haml"
 gem "newrelic_rpm"
 gem "pg"
+gem "sqlite3"
 gem "zurb-foundation"
 
 group :production do
