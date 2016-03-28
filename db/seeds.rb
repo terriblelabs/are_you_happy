@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+100.times do
+  Mood.create!(happy: [true, false].sample, created_at: rand(14).days.ago)
+end
